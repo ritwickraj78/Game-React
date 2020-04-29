@@ -2,9 +2,9 @@ import React from 'react';
 
 const Answer = (props)=>{
     let answer = props.answer.word;
-    const hint = props.answer.hint;
-    let choose = props.chosen;
-    let guess  = choose.join('');
+    let hint = props.answer.hint;
+    let pick = props.pickedArray;
+    let guess  = pick.join('');
     let regexp = new RegExp('[^' + guess + ']','g');
     let underscore = answer.replace(regexp, '_');
 
